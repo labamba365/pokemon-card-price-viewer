@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Card Price Viewer</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pokémon Card Price Viewer</h1>
+      <p>
+        Select a price metric to view the top 10 Pokémon trading cards sorted by
+        that value. Data is loaded locally from <code>cards_data.json</code>.
+      </p>
+    </header>
+    <main>
+      <label for="metric-select">Sort by:</label>
+      <select id="metric-select">
+        <option value="market" selected>Market</option>
+        <option value="high">High</option>
+        <option value="mid">Mid</option>
+        <option value="low">Low</option>
+      </select>
+      <table id="card-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Low ($)</th>
+            <th>Mid ($)</th>
+            <th>High ($)</th>
+            <th>Market ($)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <footer>
+      <p>
+        Built with vanilla JavaScript. View source on
+        <a href="https://github.com/labamba365/pokemon-card-price-viewer" target="_blank" rel="noopener noreferrer"
+          >GitHub</a
+        >.
+      </p>
+    </footer>
+    <!-- Include our script after the DOM so elements exist when script runs -->
+    <script src="script.js"></script>
+  </body>
+</html>
